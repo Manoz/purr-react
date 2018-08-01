@@ -5,6 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const { HashedModuleIdsPlugin } = require('webpack');
 
+const port = process.env.PORT || 4000;
+
 module.exports = require('./webpack.config.base')({
   mode: 'production',
 
@@ -13,6 +15,14 @@ module.exports = require('./webpack.config.base')({
   output: {
     filename: 'scripts/[name].[chunkhash].js',
     chunkFilename: 'scripts/[name].[chunkhash].chunk.js',
+  },
+
+  devServer: {
+    contentBase: path.join(__dirname, 'build'),
+    port,
+    watchContentBase: false,
+    hot: false,
+    noInfo: false,
   },
 
   optimization: {
@@ -82,11 +92,12 @@ module.exports = require('./webpack.config.base')({
       theme_color: '#cf4647',
       filename: 'manifest.json',
       fingerprints: false,
+      inject: true,
       icons: [
         {
-          src: path.resolve('public/images/favicon/icon-512x512.png'),
+          src: path.resolve('public/images/icon-512x512.png'),
           sizes: [72, 96, 120, 128, 144, 152, 167, 180, 192, 384, 512],
-          destination: path.join('images', 'favicon'),
+          destination: path.join('', 'images'),
         },
       ],
     }),

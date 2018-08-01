@@ -23,6 +23,14 @@ module.exports = options => ({
     options.output,
   ),
 
+  devServer: Object.assign(
+    {
+      index: './public/index.html',
+      historyApiFallback: true,
+    },
+    options.devServer,
+  ),
+
   optimization: options.optimization,
   devtool: options.devtool,
   target: 'web',

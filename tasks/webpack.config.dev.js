@@ -4,13 +4,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
+const port = process.env.PORT || 3000;
+
 module.exports = require('./webpack.config.base')({
   mode: 'development',
 
   // Add hot reloading in development
   entry: [
     'eventsource-polyfill', // Necessary for hot reloading with IE
-    'webpack-hot-middleware/client?reload=true',
+    'react-hot-loader/patch',
+    `webpack-dev-server/client?http://localhost:${port}`,
     path.join(process.cwd(), 'app/app.js'),
   ],
 
@@ -26,6 +29,14 @@ module.exports = require('./webpack.config.base')({
       name: 'vendors',
     },
     runtimeChunk: true,
+  },
+
+  devServer: {
+    contentBase: path.join(__dirname, 'app'),
+    port,
+    watchContentBase: true,
+    hot: true,
+    noInfo: true,
   },
 
   devtool: 'eval-source-map',

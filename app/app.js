@@ -5,17 +5,24 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { AppContainer } from 'react-hot-loader';
 import { BrowserRouter } from 'react-router-dom';
-// import { AppContainer } from 'react-hot-loader';
 import 'sanitize.css/sanitize.css';
 
 // Import root app
 import App from './containers/App';
 
+// Load the favicons and the .htaccess file
+import '!file-loader?name=images/[name].[ext]!../public/images/favicon.ico';
+import '!file-loader?name=images/[name].[ext]!../public/images/safari-pinned-tab.svg';
+import 'file-loader?name=.htaccess!../public/.htaccess';
+
 export const Root = () => (
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <AppContainer>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </AppContainer>
 );
 
 if (module.hot) {
