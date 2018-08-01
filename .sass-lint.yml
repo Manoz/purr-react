@@ -1,0 +1,17 @@
+files:
+  include:
+    - "app/**/*.s+(a|c)ss"
+  ignore:
+    - "node_modules/**/*.s+(a|c)ss"
+
+rules:
+  indentation:
+    - 2
+    -
+      size: 2
+  property-sort-order: 0
+  force-attribute-nesting: 0
+  no-qualifying-elements: 0
+  no-duplicate-properties: 0
+  force-element-nesting: 0
+  single-line-per-selector: 0
