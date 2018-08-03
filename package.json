@@ -1,7 +1,7 @@
 {
   "name": "purr-react",
   "displayName": "Purr React",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A simple react boilerplate built with modern web technologies",
   "author": {
     "name": "Kevin Legrand",
@@ -22,7 +22,7 @@
   "scripts": {
     "preinstall": "node tools/helpers/nodeVersionCheck.js",
     "start-message": "node tools/helpers/startMessage.js",
-    "prestart": "npm run start-message",
+    "prestart": "npm run start-message && npm run modernizr:build",
     "start": "cross-env NODE_ENV=development webpack-dev-server --open --config ./tasks/webpack.config.dev.js",
     "start:prod": "npm run test && npm run build && npm run open:dist",
     "open:dist": "cross-env NODE_ENV=production webpack-dev-server --open --config ./tasks/webpack.config.prod.js",
@@ -32,8 +32,9 @@
     "lint:eslint": "eslint --ignore-path .eslintignore --ignore-pattern tools",
     "lint:eslint:fix": "eslint --ignore-path .eslintignore --ignore-pattern tools --fix",
     "lint:js": "npm run lint:eslint -- . ",
+    "modernizr:build": "modernizr -c tools/helpers/modernizr-config.json -d app/modernizr-custom.js",
     "build-message": "node tools/helpers/buildMessage.js",
-    "prebuild": "npm run build-message && npm run build:clean",
+    "prebuild": "npm run build-message && npm run build:clean && npm run modernizr:build",
     "build": "cross-env NODE_ENV=production node tools/build.js",
     "build:clean": "rimraf ./build",
     "pretest": "npm run test:clean && npm run lint",
@@ -64,7 +65,8 @@
       "app/**/*.{js,jsx}",
       "!app/**/*.test.{js,jsx}",
       "!app/app.js",
-      "!app/styles.js"
+      "!app/styles.js",
+      "!app/modernizr-custom.js"
     ],
     "coverageThreshold": {
       "global": {
@@ -83,6 +85,7 @@
     "chalk": "2.4.1",
     "cross-env": "5.2.0",
     "lodash": "4.17.10",
+    "modernizr": "3.6.0",
     "prop-types": "15.6.2",
     "react": "16.4.2",
     "react-dom": "16.4.2",

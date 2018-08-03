@@ -2,3 +2,4 @@
 /node_modules
 /coverage
 /tools/templates
+/app/modernizr-custom.js

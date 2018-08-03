@@ -10,6 +10,9 @@ import { AppContainer } from 'react-hot-loader';
 import 'sanitize.css/sanitize.css';
 import 'styles';
 
+// Import our custom modernizr build
+import 'modernizr-custom';
+
 // Import root app
 import App from 'containers/App';
 

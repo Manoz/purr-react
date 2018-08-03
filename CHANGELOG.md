@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.0.6
+
+Add more content again and better styles for the demo app.
+
+I've also added Modernizr with a custom build. The build is made automatically when you start the app or the production build.
+I'll probably find a better way to handle Modernizr later but looks like it works for now ^^
+
+You can run `yarn modernizr:build` or `npm run modernizr:build` to create a custom build. It will use the `modernizr-config.json` in `tools/helpers` and output the result in `app/modernizr-custom.js`. You might want to remove this file from your source control. It's up to you.
+
 ## 0.0.5
 
 More content added to the default app with more tests.
