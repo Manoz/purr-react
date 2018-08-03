@@ -2,7 +2,9 @@
 <br />
 <div align="center">
 
-**Current version:** `0.0.2`
+[![tests][tests]][tests-url]
+
+**Current version:** `0.0.3`
 </div>
 
 ## 🤖 Introduction
@@ -15,3 +17,6 @@ There are a lot of react boilerplates everywhere but I've never been able to fin
 
 # License
 Released under the [MIT](./LICENSE) license.
+
+[tests]: https://travis-ci.com/Manoz/purr-react.svg?token=fV1pgutnXPjejYrLnsBw&branch=master
+[tests-url]: https://travis-ci.com/Manoz/purr-react
