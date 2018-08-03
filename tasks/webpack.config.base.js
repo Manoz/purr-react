@@ -38,7 +38,7 @@ module.exports = options => ({
 
   resolve: {
     modules: ['node_modules', 'app'],
-    extensions: ['.js', '.jsx', '.react.js'],
+    extensions: ['*', '.js', '.jsx', '.react.js'],
     mainFields: ['browser', 'jsnext:main', 'main'],
   },
 
@@ -72,13 +72,10 @@ module.exports = options => ({
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: options.babelQuery,
-        },
+        use: ['babel-loader'],
       },
       {
-        test: /\.(sa|sc|c)ss$/,
+        test: /\.css$/,
         use: [
           // creates style nodes from JS strings
           // fallback to style-loader in dev env
@@ -96,13 +93,6 @@ module.exports = options => ({
               plugins: () => [
                 require('autoprefixer'), // eslint-disable-line
               ],
-              sourceMap: false,
-            },
-          }, {
-            // compiles Sass to CSS
-            loader: 'sass-loader',
-            options: {
-              includePaths: [path.resolve(__dirname, 'app', 'scss')],
               sourceMap: false,
             },
           },
