@@ -39,9 +39,8 @@
     "pretest": "npm run test:clean && npm run lint",
     "test:clean": "rimraf ./coverage",
     "test": "cross-env NODE_ENV=test jest --coverage",
-    "test:CI": "cross-env NODE_ENV=test babel-node tools/testCi.js",
     "test:watch": "cross-env NODE_ENV=test jest --watchAll",
-    "test:cover:CI": "npm run test:CI -- --coverage && cat ./coverage/lcov.info | coveralls"
+    "test:cover": "cat ./coverage/lcov.info | coveralls"
   },
   "jest": {
     "testEnvironment": "node",
