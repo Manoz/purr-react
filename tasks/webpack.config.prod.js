@@ -72,7 +72,7 @@ module.exports = require('./webpack.config.base')({
       template: 'public/index.html',
       minify: {
         removeComments: true,
-        collapseWhitespace: false,
+        collapseWhitespace: true,
         removeRedundantAttributes: true,
         useShortDoctype: true,
         removeEmptyAttributes: true,
