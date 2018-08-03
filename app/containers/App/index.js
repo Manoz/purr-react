@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
 import Header from 'components/Header';
 import HomePage from '../HomePage';
@@ -16,12 +16,14 @@ const Wrapper = styled.div`
 
 export default function App() {
   return (
-    <Wrapper>
-      <Header />
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="" component={NotFoundPage} />
-      </Switch>
-    </Wrapper>
+    <BrowserRouter>
+      <Wrapper>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="" component={NotFoundPage} />
+        </Switch>
+      </Wrapper>
+    </BrowserRouter>
   );
 }
