@@ -4,6 +4,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const { HashedModuleIdsPlugin } = require('webpack');
+const Visualizer = require('webpack-visualizer-plugin');
 
 const port = process.env.PORT || 4000;
 
@@ -107,5 +108,7 @@ module.exports = require('./webpack.config.base')({
       hashDigest: 'hex',
       hashDigestLength: 20,
     }),
+
+    new Visualizer(),
   ],
 });
