@@ -7,7 +7,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import { BrowserRouter } from 'react-router-dom';
+
 import 'sanitize.css/sanitize.css';
+import './styles';
 
 // Import root app
 import App from './containers/App';
