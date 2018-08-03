@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Img /> should match the snapshot 1`] = `
+.c0 {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+<img
+  alt="test"
+  className="c0"
+  src="http://example.com/test.jpg"
+/>
+`;

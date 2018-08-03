@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Header from '../../components/Header';
+import A from 'components/A';
+import H2 from 'components/H2';
 
 class HomePage extends React.Component {
   constructor() {
@@ -11,15 +12,15 @@ class HomePage extends React.Component {
 
   render() {
     return (
-      <div>
-        <Header />
-        <main className="site-main" role="main">
-          <h1>{this.state.message}</h1>
-          <p>
-            <Link to='/about'>Test 404</Link>
-          </p>
-        </main>
-      </div>
+      <main className="site-main" role="main">
+        <H2>{this.state.message}</H2>
+        <p>Pellentesque <A href="http://google.com" target="_blank">habitant</A> morbi tristique senectus et netus et malesuada
+        fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies
+        eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+        Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+
+        <p><Link to='/about'>Test 404</Link></p>
+      </main>
     );
   }
 }
