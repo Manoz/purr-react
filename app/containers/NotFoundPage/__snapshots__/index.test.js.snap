@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotFoundPage /> should have a <h1> title 1`] = `
+.c0 {
+  margin-top: 1.2em;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.09375;
+  -webkit-letter-spacing: .011em;
+  -moz-letter-spacing: .011em;
+  -ms-letter-spacing: .011em;
+  letter-spacing: .011em;
+}
+
+<h1
+  className="c0"
+/>
+`;

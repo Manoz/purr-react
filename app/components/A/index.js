@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 const A = styled.a`
-  color: black;
+  padding-bottom: 2px;
+  color: #c9abf8;
   text-decoration: none;
   text-decoration-skip: objects;
   border-bottom: 1px solid transparent;
@@ -9,12 +10,12 @@ const A = styled.a`
 
   &:link,
   &:visited {
-    color: black;
+    color: #c9abf8;
   }
 
   &:hover {
-    color: var(--primaryColor);
-    border-bottom: 1px solid var(--primaryColor);
+    color: var(--secondaryColor);
+    border-bottom: 1px solid var(--secondaryColor);
     transition: color .15s, border .15s;
   }
 

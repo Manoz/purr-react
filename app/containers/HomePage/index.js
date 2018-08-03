@@ -32,7 +32,7 @@ class HomePage extends React.Component {
         or anything too overkill for a small project. You can extend the config as
         much as you want.</p>
 
-        <p><Link to='/about'>Link to another page</Link> <Link to='/trololo'>| Test bad link</Link></p>
+        <p><Link to='/about'>Link to another page</Link> | <Link to='/trololo'>Test bad link</Link></p>
       </main>
     );
   }

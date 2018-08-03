@@ -1,6 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
+import 'jest-styled-components';
 
+import H1 from 'components/H1';
 import NotFoundPage from './index';
 
 describe('<NotFoundPage />', () => {
@@ -10,9 +13,7 @@ describe('<NotFoundPage />', () => {
   });
 
   it('should have a <h1> title', () => {
-    const wrapper = shallow(<NotFoundPage />);
-    const actual = wrapper.find('h1').text();
-
-    expect(actual).toEqual('404 page not found');
+    const wrapper = renderer.create(<H1 />).toJSON();
+    expect(wrapper).toMatchSnapshot();
   });
 });

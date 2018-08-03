@@ -2,7 +2,7 @@
 
 exports[`<Span /> should match the snapshot 1`] = `
 .c0 {
-  color: #555;
+  color: #ebebeb;
 }
 
 <span
@@ -14,7 +14,7 @@ exports[`<Span /> should match the snapshot 1`] = `
 
 exports[`<Span /> should render without throwing an error 1`] = `
 .c0 {
-  color: #555;
+  color: #ebebeb;
 }
 
 <span

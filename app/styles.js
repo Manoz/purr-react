@@ -9,13 +9,14 @@ injectGlobal`
   }
 
   :root {
-    --primaryColor: #242424;
-    --secondaryColor: #f36;
+    --primaryColor: #ebebeb;
+    --secondaryColor: #d85a94;
     --fontStack: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     --fontMono: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
   }
 
   html {
+    font-size: 112.5%;
     text-size-adjust: 100%;
     cursor: inherit;
   }
@@ -26,14 +27,14 @@ injectGlobal`
   }
 
   body {
-    font-size: 1.0625rem;
-    line-height: 1.52947;
+    font-size: 18px;
+    line-height: 1.45;
     font-weight: 400;
     font-style: normal;
     font-family: var(--fontStack);
     color: var(--primaryColor);
     letter-spacing: -.021em;
-    background-color: white;
+    background-color: #162636;
   }
 
   body,
@@ -47,16 +48,17 @@ injectGlobal`
   }
 
   p {
-    font-size: 1.0625rem;
+    font-size: 18px;
     margin: 1em 0 0;
     margin-top: 13px;
-    line-height: 1.52947;
+    line-height: 1.45;
     font-weight: 400;
     letter-spacing: -.021em;
   }
 
   a {
-    color: black;
+    padding-bottom: 2px;
+    color: #c9abf8;
     text-decoration: none;
     text-decoration-skip: objects;
     border-bottom: 1px solid transparent;
@@ -64,12 +66,12 @@ injectGlobal`
 
     &:link,
     &:visited {
-      color: black;
+      color: #c9abf8;
     }
 
     &:hover {
-      color: var(--primaryColor);
-      border-bottom: 1px solid var(--primaryColor);
+      color: var(--secondaryColor);
+      border-bottom: 1px solid var(--secondaryColor);
       transition: color .15s, border .15s;
     }
 

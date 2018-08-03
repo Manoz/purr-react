@@ -16,7 +16,7 @@ describe('<Span />', () => {
   it('should render without throwing an error', () => {
     const wrapper = renderer.create(<Span />).toJSON();
     expect(wrapper).toMatchSnapshot();
-    expect(wrapper).toHaveStyleRule('color', '#555');
+    expect(wrapper).toHaveStyleRule('color', '#ebebeb');
   });
 
   it('applies style according to passed props', () => {

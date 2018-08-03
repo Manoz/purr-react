@@ -5,8 +5,8 @@ const Code = styled.code`
   margin: 0;
   font-weight: 400;
   font-size: 88.5%;
-  color: black;
-  background-color: rgba(27, 31, 35, .05);
+  color: white;
+  background-color: rgba(144, 144, 144, .09);
   border-radius: 3px;
   word-break: break-word;
 `;
