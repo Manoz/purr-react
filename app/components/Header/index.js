@@ -2,7 +2,7 @@ import React from 'react';
 
 import pkg from '../../../package.json';
 import Img from './Img';
-import Code from './Code';
+import Code from '../Code';
 import Banner from './purr-react-banner.png';
 import Baseline from './Baseline';
 

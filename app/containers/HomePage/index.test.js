@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import H2 from 'components/H2';
+import StyledH2 from './StyledH2';
 import HomePage from './index';
 
 describe('<HomePage />', () => {
@@ -16,7 +16,7 @@ describe('<HomePage />', () => {
     const wrapper = shallow(<HomePage/>);
     expect(
       wrapper.contains(
-        <H2>Hello, World!</H2>
+        <StyledH2>🤖 Introduction</StyledH2>
       ),
     ).toBe(true);
   });

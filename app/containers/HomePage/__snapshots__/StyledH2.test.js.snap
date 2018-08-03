@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StyledH2 /> should match the snapshot 1`] = `
+.c1 {
+  margin-top: 1.2em;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.09375;
+  -webkit-letter-spacing: .011em;
+  -moz-letter-spacing: .011em;
+  -ms-letter-spacing: .011em;
+  letter-spacing: .011em;
+}
+
+.c0 {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #b7b7b7;
+}
+
+<h2
+  className="c0 c1"
+>
+  test
+</h2>
+`;

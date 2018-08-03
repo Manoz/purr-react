@@ -9,7 +9,7 @@ injectGlobal`
   }
 
   :root {
-    --primaryColor: #555;
+    --primaryColor: #242424;
     --secondaryColor: #f36;
     --fontStack: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     --fontMono: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
@@ -31,7 +31,7 @@ injectGlobal`
     font-weight: 400;
     font-style: normal;
     font-family: var(--fontStack);
-    color: #555;
+    color: var(--primaryColor);
     letter-spacing: -.021em;
     background-color: white;
   }
@@ -56,7 +56,7 @@ injectGlobal`
   }
 
   a {
-    color: var(--secondaryColor);
+    color: black;
     text-decoration: none;
     text-decoration-skip: objects;
     border-bottom: 1px solid transparent;
@@ -64,7 +64,7 @@ injectGlobal`
 
     &:link,
     &:visited {
-      color: var(--secondaryColor);
+      color: black;
     }
 
     &:hover {

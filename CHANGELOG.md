@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.5
+
+More content added to the default app with more tests.
+
 ## 0.0.4
 
 The build was broken for some reason. No error, no fail with webpack or Jest but it didn't work. I resolved this by changing the way I render the app.

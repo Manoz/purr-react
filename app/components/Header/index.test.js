@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 
 import Header from './index';
 import Img from './Img';
-import Code from './Code';
+import Code from '../Code';
 import pkg from '../../../package.json';
 
 describe('<Header />', () => {

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const A = styled.a`
-  color: var(--secondaryColor);
+  color: black;
   text-decoration: none;
   text-decoration-skip: objects;
   border-bottom: 1px solid transparent;
@@ -9,7 +9,7 @@ const A = styled.a`
 
   &:link,
   &:visited {
-    color: var(--secondaryColor);
+    color: black;
   }
 
   &:hover {

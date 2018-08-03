@@ -4,7 +4,7 @@
 
 [![tests][tests]][tests-url]
 
-**Current version:** `0.0.4`
+**Current version:** `0.0.5`
 </div>
 
 ## 🤖 Introduction

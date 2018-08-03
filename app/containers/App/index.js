@@ -4,6 +4,7 @@ import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
 import Header from 'components/Header';
 import HomePage from '../HomePage';
+import AboutPage from '../AboutPage';
 import NotFoundPage from '../NotFoundPage';
 
 const Wrapper = styled.div`
@@ -21,6 +22,7 @@ export default function App() {
         <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />
+          <Route path="/about" component={AboutPage} />
           <Route path="" component={NotFoundPage} />
         </Switch>
       </Wrapper>
