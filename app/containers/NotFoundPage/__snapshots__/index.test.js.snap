@@ -4,12 +4,39 @@ exports[`<NotFoundPage /> should have a <h1> title 1`] = `
 .c0 {
   margin-top: 1.2em;
   font-weight: 600;
-  font-size: 40px;
-  line-height: 1.09375;
-  -webkit-letter-spacing: .011em;
-  -moz-letter-spacing: .011em;
-  -ms-letter-spacing: .011em;
-  letter-spacing: .011em;
+}
+
+@media (min-width:768px) {
+  .c0 {
+    font-size: 28px;
+    line-height: 1.1073;
+    -webkit-letter-spacing: .012em;
+    -moz-letter-spacing: .012em;
+    -ms-letter-spacing: .012em;
+    letter-spacing: .012em;
+  }
+}
+
+@media (min-width:992px) {
+  .c0 {
+    font-size: 34px;
+    line-height: 1.08824;
+    -webkit-letter-spacing: .01em;
+    -moz-letter-spacing: .01em;
+    -ms-letter-spacing: .01em;
+    letter-spacing: .01em;
+  }
+}
+
+@media (min-width:1200px) {
+  .c0 {
+    font-size: 40px;
+    line-height: 1.09375;
+    -webkit-letter-spacing: .011em;
+    -moz-letter-spacing: .011em;
+    -ms-letter-spacing: .011em;
+    letter-spacing: .011em;
+  }
 }
 
 <h1

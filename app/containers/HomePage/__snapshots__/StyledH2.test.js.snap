@@ -4,17 +4,44 @@ exports[`<StyledH2 /> should match the snapshot 1`] = `
 .c1 {
   margin-top: 1.2em;
   font-weight: 500;
-  font-size: 2rem;
-  line-height: 1.09375;
-  -webkit-letter-spacing: .011em;
-  -moz-letter-spacing: .011em;
-  -ms-letter-spacing: .011em;
-  letter-spacing: .011em;
 }
 
 .c0 {
   padding-bottom: 1rem;
   border-bottom: 1px solid #b7b7b7;
+}
+
+@media (min-width:768px) {
+  .c1 {
+    font-size: 24px;
+    line-height: 1.20849;
+    -webkit-letter-spacing: .015em;
+    -moz-letter-spacing: .015em;
+    -ms-letter-spacing: .015em;
+    letter-spacing: .015em;
+  }
+}
+
+@media (min-width:992px) {
+  .c1 {
+    font-size: 28px;
+    line-height: 1.1073;
+    -webkit-letter-spacing: .012em;
+    -moz-letter-spacing: .012em;
+    -ms-letter-spacing: .012em;
+    letter-spacing: .012em;
+  }
+}
+
+@media (min-width:1200px) {
+  .c1 {
+    font-size: 32px;
+    line-height: 1.09375;
+    -webkit-letter-spacing: .011em;
+    -moz-letter-spacing: .011em;
+    -ms-letter-spacing: .011em;
+    letter-spacing: .011em;
+  }
 }
 
 <h2
