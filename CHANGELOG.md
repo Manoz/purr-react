@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.0.7
+
+Enhance Webpack config and add service worker in our production build.
+- Added
+  - sw-precache-webpack-plugin
+
 ## 0.0.6
 
 Add more content again and better styles for the demo app.

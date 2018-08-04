@@ -53,6 +53,9 @@ module.exports = require('./webpack.config.base')({
       inject: true,
     }),
 
+    // We want to see module names in browser profiler
+    new webpack.NamedModulesPlugin(),
+
     new CircularDependencyPlugin({
       exclude: /a\.js|node_modules/,
       failOnError: false, // show a warning when there is a circular dependency

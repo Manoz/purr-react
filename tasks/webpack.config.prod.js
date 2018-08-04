@@ -5,10 +5,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const { HashedModuleIdsPlugin } = require('webpack');
 const Visualizer = require('webpack-visualizer-plugin');
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 const port = process.env.PORT || 4000;
 
 module.exports = require('./webpack.config.base')({
+  // Stop the process if there are any errors
+  bail: true,
+
   mode: 'production',
 
   entry: [path.join(process.cwd(), 'app/app.js')],
@@ -18,6 +22,7 @@ module.exports = require('./webpack.config.base')({
     chunkFilename: 'scripts/[name].[chunkhash].chunk.js',
   },
 
+  // Used only when we run `yarn start:prod`
   devServer: {
     contentBase: path.join(__dirname, 'build'),
     port,
@@ -36,6 +41,10 @@ module.exports = require('./webpack.config.base')({
           compress: {
             ecma: 5,
             warnings: false,
+            // Disabled because of an issue with Uglify breaking seemingly valid code:
+            // https://github.com/facebookincubator/create-react-app/issues/2376
+            // Pending further investigation:
+            // https://github.com/mishoo/UglifyJS2/issues/2011
             comparisons: false,
           },
           mangle: {
@@ -49,11 +58,12 @@ module.exports = require('./webpack.config.base')({
         },
         cache: true,
         parallel: true,
-        sourceMap: false,
+        sourceMap: true,
       }),
 
       new OptimizeCSSAssetsPlugin({}),
     ],
+    // Split vendor and commons
     splitChunks: {
       chunks: 'all',
       name: 'vendors',
@@ -61,13 +71,14 @@ module.exports = require('./webpack.config.base')({
     runtimeChunk: true,
   },
 
-  devtool: 'eval-source-map',
+  devtool: 'source-map',
 
   performance: {
     assetFilter: assetFilename => !/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename),
   },
 
   plugins: [
+    // Minify the index.html file
     new HtmlWebpackPlugin({
       template: 'public/index.html',
       minify: {
@@ -85,6 +96,7 @@ module.exports = require('./webpack.config.base')({
       inject: true,
     }),
 
+    // Handle manifest.json and automatically generate favicons
     new WebpackPwaManifest({
       name: 'Purr React Boilerplate',
       short_name: 'Purr RB',
@@ -101,6 +113,29 @@ module.exports = require('./webpack.config.base')({
           destination: path.join('', 'images'),
         },
       ],
+    }),
+
+    // Generate the service worker that will precache our assets
+    new SWPrecacheWebpackPlugin({
+      // Skip the cache-busting if a URL is already hashed by webpack
+      dontCacheBustUrlsMatching: /\.\w{8}\./,
+      filename: 'scripts/service-worker.js',
+      logger(message) {
+        // if (message.indexOf('Total precache size is') === 0) {
+        //   return;
+        // }
+
+        // This message obscures real errors so we ignore it.
+        // https://github.com/facebookincubator/create-react-app/issues/2612
+        if (message.indexOf('Skipping static resource') === 0) {
+          return;
+        }
+
+        console.log(message);
+      },
+      minify: true,
+      // Do not precache sourcemaps and asset manifest
+      staticFileGlobsIgnorePatterns: [/\.map$/, /manifest\.json$/, /assets\.json$/],
     }),
 
     new HashedModuleIdsPlugin({

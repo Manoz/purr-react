@@ -12,9 +12,10 @@ import 'styles';
 
 // Import our custom modernizr build
 import 'modernizr-custom';
-
 // Import root app
 import App from 'containers/App';
+// Import the service worker configuration
+import registerServiceWorker from './registerServiceWorker';
 
 // Load the favicons and the .htaccess file
 import '!file-loader?name=images/[name].[ext]!../public/images/favicon.ico';
@@ -42,3 +43,5 @@ if (module.hot) {
     );
   });
 }
+
+registerServiceWorker();
