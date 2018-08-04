@@ -1,7 +1,7 @@
 {
   "name": "purr-react",
   "displayName": "Purr React",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "A simple react boilerplate for simple apps without Redux. It features React, hot-reloading, react-router, ServiceWorker, styled-components.",
   "author": {
     "name": "Kevin Legrand",

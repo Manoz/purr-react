@@ -16,13 +16,13 @@ class HomePage extends React.Component {
     return (
       <main className="site-main" role="main">
         <StyledH2>{this.state.message}</StyledH2>
-        <p><Span secondary>purr</Span> <Span>react</Span> is a simple boilerplate
-        to build web application using React and Webpack. It comes with some good
-        modern technologies like webpack-dev-server, eslint, babel... .</p>
+        <p><Span secondary>purr</Span> <Span>react</Span> is a simple react
+        boilerplate for simple apps without Redux. It features React,
+        hot-reloading, react-router, ServiceWorker, styled-components and much more.</p>
 
         <p>There are a lot of react boilerplates everywhere but I&apos;ve never been
         able to find one that isn&apos;t too <em>overkill</em>.<br/>
-        <A href="" target="_blank">Create React App</A> is good for creating apps
+        <A href="https://github.com/facebook/create-react-app" target="_blank">Create React App</A> is good for creating apps
         without build configuration but it completly hides the build config.
         You can <Code>eject</Code> the build config but you&apos;ll loose interest
         in using Create React App.</p>

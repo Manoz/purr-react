@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.0
+
+First release opened to public 🚀. Keep in mind that this is still a WIP project. I still have a lot of things to improve. Feel free to open issues/PR if you want to help me <3
+
+- Added
+  - Appveyor config
+  - Better documentation
+  - Github ribbon to the demo app
+
 ## 0.0.9
 
 Added a `remove-demo` script. It will remove the demo app and replace all files with basic empty files so you can start your own project.
