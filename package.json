@@ -1,14 +1,13 @@
 {
   "name": "purr-react",
   "displayName": "Purr React",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A simple react boilerplate built with modern web technologies",
   "author": {
     "name": "Kevin Legrand",
     "email": "legrd.kevin@gmail.com",
     "url": "http://k-legrand.com"
   },
-  "homepage": "https://github.com/Manoz/purr-react",
   "license": "MIT",
   "private": true,
   "repository": {
@@ -34,9 +33,8 @@
     "lint:js": "npm run lint:eslint -- . ",
     "modernizr:build": "modernizr -c tools/helpers/modernizr-config.json -d app/modernizr-custom.js",
     "build-message": "node tools/helpers/buildMessage.js",
-    "prebuild": "npm run build-message && npm run build:clean && npm run modernizr:build",
+    "prebuild": "npm run build-message && npm run modernizr:build",
     "build": "cross-env NODE_ENV=production node tools/build.js",
-    "build:clean": "rimraf ./build",
     "pretest": "npm run test:clean && npm run lint",
     "test:clean": "rimraf ./coverage",
     "test": "cross-env NODE_ENV=test jest --coverage",
@@ -129,6 +127,7 @@
     "exports-loader": "0.7.0",
     "file-loader": "1.1.11",
     "friendly-errors-webpack-plugin": "1.7.0",
+    "fs-extra": "7.0.0",
     "html-loader": "0.5.5",
     "html-webpack-plugin": "3.2.0",
     "image-webpack-loader": "4.3.1",

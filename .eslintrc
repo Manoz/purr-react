@@ -44,6 +44,7 @@
     "no-console": 0,
     "no-shadow": 0,
     "no-use-before-define": 0,
+    "operator-linebreak": 0,
     "prefer-destructuring": 0,
     "prefer-template": 2,
     "react/jsx-no-target-blank": 0

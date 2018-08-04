@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.8
+
+Changed the build script according to the amazing one made by [create-react-app](https://github.com/facebook/create-react-app).
+
 ## 0.0.7
 
 Enhance Webpack config and add service worker in our production build.

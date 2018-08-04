@@ -4,7 +4,7 @@
 
 [![tests][tests]][tests-url]
 
-**Current version:** `0.0.7`<br/>
+**Current version:** `0.0.8`<br/>
 Demo app: [https://peaceful-ritchie-9a939b.netlify.com](https://peaceful-ritchie-9a939b.netlify.com/)
 </div>
 
