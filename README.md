@@ -1,15 +1,15 @@
-<img src="https://i.imgur.com/h5Vh53d.png" alt="purr react banner"/>
+<img src="https://i.imgur.com/PYiIuXL.png" alt="purr react banner"/>
 <br />
 <div align="center">
+
+[![version]][version] [![licenses][licenses]][licenses-url]
 
 [![tests][tests]][tests-url]
 [![builds][builds]][builds-url]
 [![deps][deps]][deps-url]
 [![deps-dev][deps-dev]][deps-dev-url]
 [![cover][cover]][cover-url]
-[![licenses][licenses]][licenses-url]
 
-**Current version:** `0.1.0`<br/>
 Demo app: [https://peaceful-ritchie-9a939b.netlify.com](https://peaceful-ritchie-9a939b.netlify.com/)
 </div>
 
@@ -83,3 +83,5 @@ Released under the [MIT](./LICENSE) license.
 
 [licenses-url]: https://github.com/Manoz/purr-react/blob/master/LICENSE
 [licenses]: https://img.shields.io/badge/license-MIT-blue.svg
+
+[version]: https://img.shields.io/badge/version-0.1.0-%23d85a94.svg
