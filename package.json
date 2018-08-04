@@ -1,8 +1,8 @@
 {
   "name": "purr-react",
   "displayName": "Purr React",
-  "version": "0.0.8",
-  "description": "A simple react boilerplate built with modern web technologies",
+  "version": "0.0.9",
+  "description": "A simple react boilerplate for simple apps without Redux. It features React, hot-reloading, react-router, ServiceWorker, styled-components.",
   "author": {
     "name": "Kevin Legrand",
     "email": "legrd.kevin@gmail.com",
@@ -32,6 +32,7 @@
     "lint:eslint:fix": "eslint --ignore-path .eslintignore --ignore-pattern tools --fix",
     "lint:js": "npm run lint:eslint -- . ",
     "modernizr:build": "modernizr -c tools/helpers/modernizr-config.json -d app/modernizr-custom.js",
+    "remove-demo": "rimraf ./build && npm run test:clean && shjs ./tools/cleanDemo.js",
     "build-message": "node tools/helpers/buildMessage.js",
     "prebuild": "npm run build-message && npm run modernizr:build",
     "build": "cross-env NODE_ENV=production node tools/build.js",

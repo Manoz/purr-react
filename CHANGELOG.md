@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.9
+
+Added a `remove-demo` script. It will remove the demo app and replace all files with basic empty files so you can start your own project.
+
 ## 0.0.8
 
 Changed the build script according to the amazing one made by [create-react-app](https://github.com/facebook/create-react-app).
