@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
 import Container from 'components/Container';
@@ -12,6 +13,12 @@ export default function App() {
   return (
     <BrowserRouter>
       <Container>
+        <Helmet
+          titleTemplate="%s - Purr React"
+          defaultTitle="Purr React"
+        >
+          <meta name="description" content="A simple yet powerfull react boilerplate" />
+        </Helmet>
         <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />
