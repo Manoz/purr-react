@@ -8,7 +8,6 @@ script:
   - npm test -- --maxWorkers=4
   - npm run build
 
-
 before_install:
   - export CHROME_BIN=chromium-browser
   - export DISPLAY=:99.0
@@ -17,6 +16,8 @@ before_install:
 notifications:
   email:
     on_failure: change
+  slack:
+    secure: amjidAvmUisjNhSUwRAlAqzmpU/ooxYbH1k7glBPqw23/lrNAt816O8b1Y6aPeIp/I8Cf5BmU61b0QIFVJv3dMWO6TB3wwTjDq7uAUBUo/ku+2NBH1jMmvFPGDcnMM6NCP9kOnzvTHXCoRuDSWrSFqZKHOLV/hUQzFEBsfcH3QOlS/1YV16i4hZm9CXQAZHxre88Aluec+6YR3JYHgaPPSLrZIu9NKlGvtJofVb8sBWC/kolN7o8iHR/DcHrnU1xu5az6SaR+tarBh7PHsV8/IscWwKEFEqq0l0iYNBRYOIsaRKmDEYhA+bltXXrBT+W+OfqLXDkh9hRBr1A03crFOX6NFPVxJl/7IcvdFsw529rKVDUaJ9wvTWe+4NxkpyES4CUlrrW1uTTngXvkNm9wIU26M17koqZmMwHPoG2X4M0USrJsFX+zDSfWP12tSrKsFDfPlUzPoNTq0inrTpuxODja/bAQaIBFul1AViUV65oKevd40cVIB0MAEYc4SSG7VYvDZm6ztsEXbSFg+yHzWA9wxOJK+PMzXftEbwYYFTupM1TunZE/8Obw/pi+CxO6/Ql/f9bJThYSu6MwHt+qfpHm87crbPNGHfrUFEcBoWMkcx+92Oa0d+6bVF+yEq1D5gfC40b1tdAQEK4xfdnZBUDZ6QJlhThlYq9vXN6l14=
 
 after_success:
   - npm run test:cover
