@@ -4,7 +4,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const { HashedModuleIdsPlugin } = require('webpack');
-const Visualizer = require('webpack-visualizer-plugin');
+// const Visualizer = require('webpack-visualizer-plugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 const port = process.env.PORT || 4000;
@@ -144,6 +144,7 @@ module.exports = require('./webpack.config.base')({
       hashDigestLength: 20,
     }),
 
-    new Visualizer(),
+    // Disabled for now > Tapable.plugin is deprecated
+    // new Visualizer(),
   ],
 });
