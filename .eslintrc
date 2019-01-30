@@ -59,7 +59,10 @@
     "import/ignore": [
       "node_modules",
       "\\.(coffee|scss|css|less|hbs|svg|json)$"
-    ]
+    ],
+    "react": {
+      "version": "detect"
+    }
   },
   "globals": {}
 }
