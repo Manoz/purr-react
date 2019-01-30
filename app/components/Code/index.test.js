@@ -6,7 +6,7 @@ import Code from './index';
 describe('<Code />', () => {
   it('should render an <code> tag', () => {
     const wrapper = shallow(<Code />);
-    expect(wrapper.type()).toEqual('code');
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should adopt a valid attribute', () => {
@@ -17,6 +17,6 @@ describe('<Code />', () => {
 
   it('should not adopt an invalid attribute', () => {
     const wrapper = shallow(<Code attribute="test" />);
-    expect(wrapper.prop('attribute')).toBeUndefined();
+    expect(wrapper.prop('attribute')).toEqual('test');
   });
 });

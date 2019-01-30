@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<P /> should render a <p> tag 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "P-sc-1wt57lm-0",
+        "isStatic": true,
+        "rules": Array [
+          "font-size:15px;letter-spacing:0;",
+        ],
+      },
+      "displayName": "P",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "P-sc-1wt57lm-0",
+      "target": "p",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+>
+  test
+</StyledComponent>
+`;

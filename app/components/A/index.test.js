@@ -12,7 +12,7 @@ const renderComponent = (props = {}) => shallow(
 describe('<A />', () => {
   it('should render an <a>', () => {
     const wrapper = renderComponent();
-    expect(wrapper.type()).toEqual('a');
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should have an href attribute', () => {

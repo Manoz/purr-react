@@ -29,7 +29,7 @@ class Header extends React.Component {
       <header className="main-header" role="banner">
         <StyledA
           href="https://github.com/Manoz/purr-react"
-          class="github-corner"
+          className="github-corner"
           title="View source on Github"
           target="_blank"
           aria-label="View source on Github">

@@ -1,18 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StyledH2 /> should match the snapshot 1`] = `
-.c1 {
+.c0 {
   margin-top: 1.2em;
   font-weight: 500;
-}
-
-.c0 {
   padding-bottom: 1rem;
   border-bottom: 1px solid #b7b7b7;
 }
 
 @media (min-width:768px) {
-  .c1 {
+  .c0 {
     font-size: 24px;
     line-height: 1.20849;
     -webkit-letter-spacing: .015em;
@@ -23,7 +20,7 @@ exports[`<StyledH2 /> should match the snapshot 1`] = `
 }
 
 @media (min-width:992px) {
-  .c1 {
+  .c0 {
     font-size: 28px;
     line-height: 1.1073;
     -webkit-letter-spacing: .012em;
@@ -34,7 +31,7 @@ exports[`<StyledH2 /> should match the snapshot 1`] = `
 }
 
 @media (min-width:1200px) {
-  .c1 {
+  .c0 {
     font-size: 32px;
     line-height: 1.09375;
     -webkit-letter-spacing: .011em;
@@ -45,7 +42,7 @@ exports[`<StyledH2 /> should match the snapshot 1`] = `
 }
 
 <h2
-  className="c0 c1"
+  className="H2-zasn0o-0 c0"
 >
   test
 </h2>

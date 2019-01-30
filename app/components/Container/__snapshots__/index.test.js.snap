@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Container /> should render a <div> 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "Container-o1cmc9-0",
+        "isStatic": true,
+        "rules": Array [
+          "width:100%;padding:0 15px;margin:0 auto;@media (min-width:576px){max-width:540px;}@media (min-width:768px){max-width:720px;}@media (min-width:992px){max-width:960px;}@media (min-width:1200px){max-width:1140px;}",
+        ],
+      },
+      "displayName": "Container",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "Container-o1cmc9-0",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;

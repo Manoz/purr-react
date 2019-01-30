@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListItem /> should render a <li> tag 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "ListItem-odeuvr-0",
+        "isStatic": true,
+        "rules": Array [
+          "font-size:18px;line-height:1.45;font-weight:400;letter-spacing:-.021em;",
+        ],
+      },
+      "displayName": "ListItem",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "ListItem-odeuvr-0",
+      "target": "li",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;

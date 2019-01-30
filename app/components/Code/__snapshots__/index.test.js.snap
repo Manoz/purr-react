@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Code /> should render an <code> tag 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "Code-ka9el6-0",
+        "isStatic": true,
+        "rules": Array [
+          "padding:.2em .4em;margin:0;font-weight:400;font-size:88.5%;color:white;background-color:rgba(144,144,144,.09);border-radius:3px;word-break:break-word;",
+        ],
+      },
+      "displayName": "Code",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "Code-ka9el6-0",
+      "target": "code",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;

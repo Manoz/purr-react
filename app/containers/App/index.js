@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import { GlobalStyles, SanitizeCss } from 'styles';
 
 import Container from 'components/Container';
 import Header from 'components/Header';
@@ -13,6 +14,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <Container>
+        <SanitizeCss />
+        <GlobalStyles />
         <Helmet
           titleTemplate="%s - Purr React"
           defaultTitle="Purr React"

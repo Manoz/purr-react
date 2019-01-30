@@ -1,7 +1,13 @@
 /* eslint no-unused-expressions: 0 */
-import { injectGlobal } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
-injectGlobal`
+import sanitizeCss from '!raw-loader!sanitize.css/sanitize.css';
+
+export const SanitizeCss = createGlobalStyle`
+  ${sanitizeCss}
+`;
+
+export const GlobalStyles = createGlobalStyle`
   *,
   *::before,
   *::after {

@@ -6,7 +6,7 @@ import Ul from './Ul';
 describe('<Ul />', () => {
   it('should render an <ul> tag', () => {
     const wrapper = shallow(<Ul />);
-    expect(wrapper.type()).toEqual('ul');
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should adopt a valid attribute', () => {
@@ -17,6 +17,6 @@ describe('<Ul />', () => {
 
   it('should not adopt an invalid attribute', () => {
     const wrapper = shallow(<Ul attribute="test" />);
-    expect(wrapper.prop('attribute')).toBeUndefined();
+    expect(wrapper.prop('attribute')).toEqual('test');
   });
 });

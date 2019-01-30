@@ -35,30 +35,17 @@ module.exports = require('./webpack.config.base')({
     minimizer: [
       new UglifyJsPlugin({
         uglifyOptions: {
-          parse: {
-            ecma: 8,
-          },
           compress: {
-            ecma: 5,
-            warnings: false,
-            // Disabled because of an issue with Uglify breaking seemingly valid code:
-            // https://github.com/facebookincubator/create-react-app/issues/2376
-            // Pending further investigation:
-            // https://github.com/mishoo/UglifyJS2/issues/2011
-            comparisons: false,
+            drop_console: true,
           },
-          mangle: {
-            safari10: true,
-          },
+          mangle: true,
           output: {
-            ecma: 5,
-            comments: false,
             ascii_only: true,
           },
         },
         cache: true,
         parallel: true,
-        sourceMap: true,
+        sourceMap: false,
       }),
 
       new OptimizeCSSAssetsPlugin({}),
@@ -71,10 +58,13 @@ module.exports = require('./webpack.config.base')({
     runtimeChunk: true,
   },
 
-  devtool: 'source-map',
+  devtool: false,
 
   performance: {
     assetFilter: assetFilename => !/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename),
+    hints: false,
+    maxEntrypointSize: 280000,
+    maxAssetSize: 280000,
   },
 
   plugins: [
