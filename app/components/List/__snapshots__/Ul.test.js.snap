@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Ul /> should render an <ul> tag 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "Ul-sc-10uf1zs-0",
+        "isStatic": true,
+        "rules": Array [
+          "margin:1em 0 1em 1.11111em;padding:0;& ul,& ol{margin-top:0;margin-bottom:0;}",
+        ],
+      },
+      "displayName": "Ul",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "Ul-sc-10uf1zs-0",
+      "target": "ul",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;

@@ -6,7 +6,7 @@ import Container from './index';
 describe('<Container />', () => {
   it('should render a <div>', () => {
     const wrapper = shallow(<Container />);
-    expect(wrapper.type()).toEqual('div');
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should adopt a valid attribute', () => {
@@ -17,6 +17,6 @@ describe('<Container />', () => {
 
   it('should not adopt an invalid attribute', () => {
     const wrapper = shallow(<Container attribute="test" />);
-    expect(wrapper.prop('attribute')).toBeUndefined();
+    expect(wrapper.prop('attribute')).toEqual('test');
   });
 });

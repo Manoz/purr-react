@@ -6,7 +6,7 @@ import ListItem from './ListItem';
 describe('<ListItem />', () => {
   it('should render a <li> tag', () => {
     const wrapper = shallow(<ListItem />);
-    expect(wrapper.type()).toEqual('li');
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should adopt a valid attribute', () => {
@@ -17,6 +17,6 @@ describe('<ListItem />', () => {
 
   it('should not adopt an invalid attribute', () => {
     const wrapper = shallow(<ListItem attribute="test" />);
-    expect(wrapper.prop('attribute')).toBeUndefined();
+    expect(wrapper.prop('attribute')).toEqual('test');
   });
 });

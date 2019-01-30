@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<A /> should render an <a> 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "A-nontsf-0",
+        "isStatic": true,
+        "rules": Array [
+          "padding-bottom:2px;color:#c9abf8;text-decoration:none;text-decoration-skip:objects;border-bottom:1px solid transparent;transition:color .15s,border .15s;&:link,&:visited{color:#c9abf8;}&:hover{color:var(--secondaryColor);border-bottom:1px solid var(--secondaryColor);transition:color .15s,border .15s;}&:focus{outline:0;}",
+        ],
+      },
+      "displayName": "A",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "A-nontsf-0",
+      "target": "a",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  href="http://example.com"
+>
+  test
+</StyledComponent>
+`;

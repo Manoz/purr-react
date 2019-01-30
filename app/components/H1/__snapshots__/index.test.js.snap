@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<H1 /> should render a <h1> tag 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "H1-oovbu-0",
+        "isStatic": true,
+        "rules": Array [
+          "margin-top:1.2em;font-weight:600;@media (min-width:768px){font-size:28px;line-height:1.1073;letter-spacing:.012em;}@media (min-width:992px){font-size:34px;line-height:1.08824;letter-spacing:.01em;}@media (min-width:1200px){font-size:40px;line-height:1.09375;letter-spacing:.011em;}",
+        ],
+      },
+      "displayName": "H1",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "H1-oovbu-0",
+      "target": "h1",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;
